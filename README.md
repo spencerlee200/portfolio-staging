@@ -1,10 +1,10 @@
-#Deploying static projects utilizing Git hooks
+# Deploying static projects utilizing Git hooks
 
-##Prerequisites
+## Prerequisites
 * You must have [git](https://git-scm.com/downloads) and [xcode](https://developer.apple.com/xcode/) installed
 * You must have a [Ubuntu 16.04.02](https://github.com/spencerlee200/static-sites-pipeline/blob/master/setup.md) server set up
 
-##1. Setting up your local repo
+## 1. Setting up your local repo
 Lets get the easy part out of the way. Navigate to the folder where you want to keep your local files and clone down your git repository. If you don't already have a git repository go create one making sure to initialise it with a readme.md file and clone it down with into your desired folder. Go ahead and cd into that project folder 
 
 ```shell
@@ -17,7 +17,7 @@ We also need to go ahead and add in our remote that we created on `/var/repos` i
 git remote add Production ssh://<user>@<your production ip>:/var/repos/<your project name>.git
 ```
 
-##2. Creating your git hooks
+## 2. Creating your git hooks
 
 Now its time to start creating the githooks that will allow for the automation of certain processes in your deployment pipeline. To get started navigate inside of the hooks folder in your `.git` directory
 
@@ -25,7 +25,7 @@ Now its time to start creating the githooks that will allow for the automation o
 cd .git/hooks
 ```
 
-###post-merge
+### post-merge
 
 There isnt an example file for a post merge created in the git init process so we are going to have to create this file ourselves. First lets create the file:
 
