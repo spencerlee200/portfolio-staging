@@ -89,7 +89,7 @@ One this command finishes running you can check if it worked by navigating to yo
 
 ![nginx install screen](http://i.imgur.com/gniYuwZ.png)
 
-##Adding Projects
+## Adding Projects
 
 For each project you want to deploy you are going to have to set up an additional subdomain on your server.
 
@@ -123,10 +123,16 @@ server {
         }
 }
 ```
+
+Next just refresh nginx with the command below:
+```shell
+sudo systemctl reload nginx
+```
+
 And thats all you have to do to add a subdomain. If you wanted to edit the landing page all you need to do it edit the default nginx page with `sudo nano /var/www/html/index.nginx-debian.html` or you could just create your own with `sudo nano /var/www/html/index.html` and delete the old one with `sudo rm /var/www/index.nginx-debian.html`.
 
 ## Deploying your project
-Now that you have your server set up I am sure you are excited to push your website live. To do that follow my deployment guide [here](https://github.com/spencerlee200/static-sites-pipeline). 
+Now that you have your server set up I am sure you are excited to push your website live. To do that follow my deployment guide [here](https://github.com/spencerlee200/portfolio-staging). 
 
 
 
