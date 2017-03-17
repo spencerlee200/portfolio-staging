@@ -91,7 +91,7 @@ One this command finishes running you can check if it worked by navigating to yo
 
 ##Adding Projects
 
-For each project you want to deploy you are going to have to do 2 things. The first is creating and configuring a subdomain. The second is creating a remote repo to deploy to. You can repeat these steps as many times as you need to. Just keep in mind how much room you are using on your server. However since these are static sites they typically are not going to be anything huge in terms of file size. 
+For each project you want to deploy you are going to have to set up an additional subdomain on your server.
 
 ### Creating a subdomain
 
@@ -100,12 +100,6 @@ First we need to move into our working directory and create a directory that our
 ```shell
 cd /var/www/html
 sudo mkdir <project name>
-```
-
-Next you need to give your user permissions through nginx to write to these files. Use the command below replacing `<name>` with your username and `<project name>` with your project once again.
-
-```shell
-sudo chown -R <name>:www-data /var/www/html/<project name>
 ```
 
 Now we have to configure nginx to send certain URLS to that subomain. First we need to access the default sites-enabled page created by nginx so that we can edit the server blocks.
@@ -130,42 +124,6 @@ server {
 }
 ```
 And thats all you have to do to add a subdomain. If you wanted to edit the landing page all you need to do it edit the default nginx page with `sudo nano /var/www/html/index.nginx-debian.html` or you could just create your own with `sudo nano /var/www/html/index.html` and delete the old one with `sudo rm /var/www/index.nginx-debian.html`.
-
-### Creating a remote repo
-These remote repositories are important to our deployment ppipeline because they will allow us to push code live to the site from out local machines.To start lets go ahead and create the directory where we will be receiving our project and give our user ownership of it.
-
-```shell
-sudo mkdir /var/repos
-sudo chown <user> /var/repos
-cd /var/repos
-```
-
-Next lets create our repo for our static projects subdomain. We need to create the folder, cd into it, and create a bare git repository.
-
-```shell
-mkdir <your project name>.git
-cd <your project name>.git
-git init --bare
-```
-
-Then we are going to create a new git hook that will allow us to automate pushing our code live when we deploy it to the site. First, lets nano into a new git hook file:
-
-```shell
-nano hooks/post-receive
-```
-
-Inside of this file you need to create a bash script that will copy your files to the live server directory (`/var/www/html/<your project name>`):
-
-```shell
-#!/bin/sh
-git --work-tree=/var/www/html/<your project name>/ --git-dir=/var/repos/<your project name>.git checkout -f
-```
-
-Now just exit and save the file (`CTRL` + `X`,then `y`, then `ENTER`). The last thing that you have to do it give this file executable permissions with:
-
-```shell
-chmod +x hooks/post-receive
-```
 
 ## Deploying your project
 Now that you have your server set up I am sure you are excited to push your website live. To do that follow my deployment guide [here](https://github.com/spencerlee200/static-sites-pipeline). 
