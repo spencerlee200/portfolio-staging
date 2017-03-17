@@ -1,0 +1,196 @@
+/*//////////////////////////////////////
+          General and Navigation
+//////////////////////////////////////*/
+body {
+  background: #111;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#header {
+  text-align: center;
+}
+
+#header h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3em;
+  margin: 8px auto;
+  padding-top: 30px;
+}
+
+#header h2 {
+  font-size: 1.5em;
+  margin: 2px auto;
+}
+
+#nav {
+  float: right;
+  top: 20px;
+  right: 30px;
+  position: absolute;
+}
+
+#nav a {
+  color: #666;
+  float: left;
+  margin-right: 20px;
+}
+
+#nav a:hover, #nav a.active:hover {
+  color: white;
+}
+
+#nav a.active {
+  color: whitesmoke;
+}
+
+.escape {
+  width: 60px;
+  top: 40px;
+  left: 30px;
+  position: absolute;
+}
+
+/*//////////////////////////////////////
+                Work
+//////////////////////////////////////*/
+#work ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 30px;
+}
+
+#work ul li {
+  height: 150px;
+  text-align: center;
+  -webkit-transform: skewY(2deg);
+     -moz-transform: skewY(2deg);
+      -ms-transform: skewY(2deg);
+          transform: skewY(2deg);
+}
+
+#work ul li a {
+  display: block;
+  height: 150px;
+  line-height: 150px;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+#work ul li:hover {
+  height: 160px;
+}
+
+#work ul li a:hover {
+  -webkit-transform: skewY(-2deg);
+     -moz-transform: skewY(-2deg);
+      -ms-transform: skewY(-2deg);
+          transform: skewY(-2deg);
+}
+
+#work img {
+  width: 100%:
+  height: 200px;
+}
+
+/*//////////////////////////////////////
+                About
+//////////////////////////////////////*/
+#about {
+  clear: both;
+  margin-bottom: 50px;
+}
+
+#about h3, #contact h3 {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+#about p {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#reach span {
+  font-size: 2em;
+  padding: 0px 20px;
+}
+
+#reach span:hover {
+  color: #00cc99;
+}
+
+/*//////////////////////////////////////
+                Contact
+//////////////////////////////////////*/
+#contact form {
+  text-align: left;
+  width: 20%;
+  margin-left: 40%;
+}
+
+#contact form > input, #contact form > textarea{
+  padding: 10px 5px;
+  margin: 5px auto;
+  width: 100%;
+  border: none;
+}
+
+#contact form > button {
+  padding: 5px 7px;
+  background: white;
+  border: none;
+  border-radius: 10%;
+}
+
+#contact form > button:hover {
+  background: #00cc99;
+  color: white;
+}
+
+/*//////////////////////////////////////
+          Media Queries
+//////////////////////////////////////*/
+@media screen and (max-width: 990px) {
+  #nav {
+    position: static;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #nav > a {
+    width: calc(100%/3);
+    margin: 0 0;
+    padding: 20px 0;
+  }
+
+  #work {
+    clear: both;
+  }
+
+  #about p {
+    width: 90%;
+  }
+
+  #contact form {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .escape {
+    display: none;
+  }
+}
