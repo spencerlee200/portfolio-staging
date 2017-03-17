@@ -89,7 +89,7 @@ One this command finishes running you can check if it worked by navigating to yo
 
 ![nginx install screen](http://i.imgur.com/gniYuwZ.png)
 
-##Adding Projects
+## Adding Projects
 
 For each project you want to deploy you are going to have to set up an additional subdomain on your server.
 

@@ -12,7 +12,11 @@ cd <your project directory>
 ```
 
 ## 2. Adding CodeShip to your project
-Next we are going to add CodeShip to our project. Thankfully you only have to go through this process the one time. To get started head over to codeship.com and make a free account.
+Next we are going to add CodeShip to our project. Thankfully you only have to go through this process the one time. To get started head over to codeship.com and make a free account. Once you are logged in hit the new project button.
+
+You will be presented with three options, github, bitbucket, and gitlabs. Click on the github icon on the far left.
+
+Next you are going to be prompted to enter the cloning URL for your github repository. Go copy that from your repo and paste it in the box.
 
 
 ## 3. Deploying
