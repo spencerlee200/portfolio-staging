@@ -5,4 +5,4 @@ read input_variable
 git commit -m "$input_variable"
 git checkout release
 git merge dev
-git push origin release
+git push origin dev
