@@ -2,6 +2,7 @@ $(document).ready(function($) {
   $(".dropdown").toggle();
 
   $("#work li").on( "click", function() {
+    $(".dropdown").hide();
     $(this).find(".dropdown").toggle();
   });
 
