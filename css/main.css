@@ -97,7 +97,7 @@ a {
 .dropdown {
   height: auto;
   display: block;
-  background: inherit;
+  background: none;
 }
 
 .dropdown div {
