@@ -68,12 +68,15 @@ a {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 #work ul li {
   padding: 20px;
   text-align: center;
+}
+
+#work ul li {
   -webkit-transform: skewY(3deg);
      -moz-transform: skewY(3deg);
       -ms-transform: skewY(3deg);
@@ -121,8 +124,9 @@ a {
 }
 
 .dropdown button:hover {
-  background: white;
-  color: inherit;
+  background: rgba(0, 0, 0, .1);
+  transform: scale(1.1);
+  color: darken;
 }
 
 .dropdown button:first-of-type {
@@ -203,7 +207,7 @@ a {
   }
 
   #nav > a {
-    width: calc(100%/3);
+    width: calc(100%/4);
     margin: 0 0;
     padding: 20px 0;
   }
