@@ -1,8 +1,8 @@
 $(document).ready(function($) {
-  $('#work li').mouseover(function() {
-    $(this).find(".down").show();
-  }).mouseout(function() {
-    $(this).find(".down").hide();
+  $(".dropdown").toggle();
+
+  $("#work li").on( "click", function() {
+    $(this).find(".dropdown").toggle();
   });
 
   var listItems = $("#work ul li");
