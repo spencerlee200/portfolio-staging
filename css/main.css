@@ -72,12 +72,16 @@ a {
 }
 
 #work ul li {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+#work ul li:hover {
+  cursor: pointer;
 }
 
 #work li span {
-  line-height: 120px;
   display: block;
   font-size: 1.5em;
   vertical-align: middle;
@@ -109,11 +113,15 @@ a {
 
 .dropdown p {
   width: 70%;
-  margin: 0 auto;
+  text-align: left;
+  margin: 25px auto;
+}
+
+.dropdown p:first-of-type {
+  text-align: center;
 }
 
 .dropdown button {
-  margin-top: 15px;
   padding: 10px 16px;
   border: 2px solid white;
   color: white;
