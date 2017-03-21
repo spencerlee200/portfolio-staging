@@ -2,8 +2,12 @@ $(document).ready(function($) {
   $(".dropdown").toggle();
 
   $("#work li").on( "click", function() {
-    //Debate on showing multiple at once
-    //$(".dropdown").hide();
+    if($(this).hasClass("slant")) {
+      $(this).find("span").toggleClass("revslant");
+    }
+    else {
+      $(this).find("span").toggleClass("slant");
+    }
     $(this).find(".dropdown").toggle();
   });
 
