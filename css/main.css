@@ -52,7 +52,7 @@ a {
 
 .escape {
   width: 60px;
-  top: 40px;
+  top: 20px;
   left: 30px;
   position: absolute;
 }
@@ -161,8 +161,12 @@ a {
 
 #about p {
   width: 50%;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
+}
+
+#about p:last-of-type {
+  text-align: center;
 }
 
 #reach span {
@@ -248,5 +252,9 @@ a {
 
   .dropdown p {
     width: 95%;
+  }
+
+  .dropdown p:first-of-type {
+    font-size: 1em;
   }
 }
