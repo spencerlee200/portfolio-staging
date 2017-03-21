@@ -1,16 +1,4 @@
 $(document).ready(function($) {
-  $(".dropdown").toggle();
-
-  $("#work li").on( "click", function() {
-    if($(this).hasClass("slant")) {
-      $(this).find("span").toggleClass("revslant");
-    }
-    else {
-      $(this).find("span").toggleClass("slant");
-    }
-    $(this).find(".dropdown").toggle();
-  });
-
   var listItems = $("#work ul li");
   listItems.each(function(i, li) {
     //var colors = ["#EF476F","#FF8C61","#FFD166","#00cc99","#118AB2","#073B4C","#EE6055"];
