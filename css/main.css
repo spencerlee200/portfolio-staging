@@ -68,7 +68,7 @@ a {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 #work ul li {
@@ -76,22 +76,25 @@ a {
   text-align: center;
 }
 
-#work ul li {
-  -webkit-transform: skewY(3deg);
-     -moz-transform: skewY(3deg);
-      -ms-transform: skewY(3deg);
-          transform: skewY(3deg);
-}
-
 #work li span {
   line-height: 120px;
   display: block;
   font-size: 1.5em;
   vertical-align: middle;
-  -webkit-transform: skewY(-3deg);
-     -moz-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
-          transform: skewY(-3deg);
+}
+
+.slant {
+  -webkit-transform: skewY(5deg);
+     -moz-transform: skewY(5deg);
+      -ms-transform: skewY(5deg);
+          transform: skewY(5deg);
+}
+
+.revslant {
+  -webkit-transform: skewY(-5deg);
+     -moz-transform: skewY(-5deg);
+      -ms-transform: skewY(-5deg);
+          transform: skewY(-5deg);
 }
 
 .dropdown {
@@ -102,10 +105,6 @@ a {
 
 .dropdown div {
   text-align: center;
-  -webkit-transform: skewY(-3deg);
-     -moz-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
-          transform: skewY(-3deg);
 }
 
 .dropdown p {
@@ -227,6 +226,10 @@ a {
   #contact form {
     width: 70%;
     margin-left: 15%;
+  }
+
+  #work ul {
+    margin-top: 80px;
   }
 }
 
