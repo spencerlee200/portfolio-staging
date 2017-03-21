@@ -117,6 +117,10 @@ a {
   margin: 25px auto;
 }
 
+.dropdown p:first-of-type {
+  text-align: center;
+}
+
 .dropdown button {
   padding: 10px 16px;
   border: 2px solid white;
